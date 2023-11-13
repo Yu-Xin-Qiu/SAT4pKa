@@ -74,12 +74,18 @@ def predict_pKa(smiles,model_name):
 
     return output.item()  
 
-
-# example
-model_name='SAT'  #SAT,GIN,GCN
+def SMILE2pKa(smiles):
+    pred_pKa1 = predict_pKa(smiles, 'GCN')
+    pred_pKa2 = predict_pKa(smiles, 'GIN')
+    pred_pKa3 = predict_pKa(smiles, 'SAT')
+    pred_pKa = (pred_pKa1 + pred_pKa2 + pred_pKa3) / 3
+    return pred_pKa
+    
+# # example
+# model_name='SAT'  #SAT,GIN,GCN
 
 smiles = 'C(C(=O)O)N'
-pred_pKa= predict_pKa(smiles,model_name)
+pred_pKa= SMILE2pKa(smiles,model_name)
 print(pred_pKa)
 
 
