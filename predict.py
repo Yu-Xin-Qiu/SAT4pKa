@@ -85,7 +85,7 @@ def SMILE2pKa(smiles):
 # model_name='SAT'  #SAT,GIN,GCN
 
 smiles = 'C(C(=O)O)N'
-pred_pKa= SMILE2pKa(smiles,model_name)
+pred_pKa= SMILE2pKa(smiles)
 print(pred_pKa)
 
 
