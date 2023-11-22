@@ -25,7 +25,7 @@ torch_scatter==2.0.9
 `predict.py` is an example file for using our tool, we provide the trained GCN, GIN and SAT model.
 
 ### Training model for Graph Transformer
-We provide the model training file `finetune.py`. In the `finetune.yaml`, you can easily change the hyperparameters.
+We provide the model training file `finetune.py`. In the `config_finetune.yaml`, you can easily change the hyperparameters.
 
 ### Model visualization
 In `explain.py`, we show how to generate the attention weight graph learned by the SAT model.The following figure shows the attention weights learned by the SAT model, using MDEA as an example.
