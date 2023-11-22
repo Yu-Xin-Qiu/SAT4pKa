@@ -22,7 +22,7 @@ torch_geometric==2.1.0
 torch_scatter==2.0.9  
 ```
 ### Using the provided model for pKa prediction
-`predict.py` is an example file for using our tool, you can choose the GCN, GIN and SAT model.
+`predict.py` is an example file for using our tool, we provide the trained GCN, GIN and SAT model.
 
 ### Training model for Graph Transformer
 We provide the model training file `finetune.py`. In the `finetune.yaml`, you can easily change the hyperparameters.
