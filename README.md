@@ -16,7 +16,7 @@ torch_geometric==2.1.0
 torch_scatter==2.0.9  
 ```
 ### Using the provided model for pKa prediction
-`prediction.py` is an example file for using our tool, we provide the pretrained and final models.
+`prediction.ipynb` is an example for using our tool, we provide the pretrained and final models.
 
 
 
