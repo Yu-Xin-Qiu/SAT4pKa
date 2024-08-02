@@ -159,7 +159,7 @@ def read_smiles(data_path, target):
                 smiles_data.append(smiles)
                 labels.append(float(label))
 
-    print(len(smiles_data))
+    # print(len(smiles_data))
     return smiles_data, labels
 
 

@@ -1,33 +1,24 @@
-batch_size: 64              #16,32,64,128,256
-epochs: 200
+batch_size: 128              
+epochs: 50
 fine_tune_from :
   # None
-  # data/model_weight/GIN/Pretrain_GIN.pth
-  # data/model_weight/GCN/Pretrain_GCN.pth
-  data/model_weight/SAT/Pretrain_SAT.pth
+  model_weight/pretrain/pretrain_acid.pth       #acid
+#  model_weight/pretrain/pretrain_base.pth          #base
 
-init_base_lr: 0.0003        #GNN encoder
-init_lr: 0.0003             #MLP
+
+init_lr: 0.0003            
 lr_decay_factor : 0.3
 min_lr :  0.0001
-weight_decay: 0.00001       #1e-3,1e-5,1e-7
-model_type: sat             #gcn,gin,sat
-seed :  2                   #0,1,2,3,4
+weight_decay: 0      
+seed :  1                  
 lr_dacay_patience : 10
 early_stop_patience : 15
 
-gnn: 
-  num_layers : 6            #2,3,4,5
-  emb_dim: 512              #256,512,1024
-  pred_n_layer : 3          #1,2,3
-  drop_ratio: 0.1           #0.1,0.3,0.5
-  pool: add                 #add,mean,max
-  pred_act : relu           #relu,softplus,leakyrelu
-  
+
 sat:
   dim_hidden : 128
   in_size : 40
-  num_class : 1             #regression task
+  num_class : 1            
   num_heads : 8
   abs_pe : rw               #rw,lap
   abs_pe_dim : 20
@@ -41,7 +32,7 @@ sat:
   num_edge_features : 10    #number of edge labels
   edge_dim : 32
   k_hop : 3
-  se  :  khopgnn            #we use the k-subtree structure extractor
+  se  :  khopgnn            #k-subtree structure extractor
   global_pool : add
 
 
